@@ -200,7 +200,7 @@ class A
 				choicepr(a,d,e);
 			}
 		}
-		void choiceP(String a,int b,int c,String d)
+		int choiceP(String a,int b,int c,String d)
 		{
 			int sad = 0;
 			String pq = hi.next();
@@ -249,16 +249,22 @@ class A
 					sad++;
 				}
 			}
+			if(pq.equalsIgnoreCase("BACK"))
+			{
+				return 5;
+			}
 			if(sad==0)
 			{
 				System.out.println("Please enter valid choice!");
 				choiceP(a,b,c,d);
 			}
+			return 0;
 		}
 		int pawnF(String a)
 		{
 			int pet =0;
 			int rec =0;
+			int vr = 0;
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr.length;j++)
@@ -275,7 +281,7 @@ class A
 						else
 						{
 							System.out.println("\n state your choice ");
-							choiceP(hip,i,j,a);
+							vr = choiceP(hip,i,j,a);
 						}
 						i=arr.length;
 						j=arr.length;
@@ -286,7 +292,7 @@ class A
 					}
 				}
 			}
-			if(rec==100)
+			if(rec==100||vr==5)
 			{
 				pet = 1;
 			}
@@ -410,6 +416,7 @@ class A
 		{
 			int vas = 0;
 			int rec=0;
+			int vr =0;
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr.length;j++)
@@ -426,7 +433,7 @@ class A
 						else
 						{
 							System.out.println("\n state your choice ");
-							choiceP(hip,i,j,a);
+							vr = choiceP(hip,i,j,a);
 						}
 						i=arr.length;
 						j=arr.length;
@@ -437,7 +444,7 @@ class A
 					}
 				}
 			}
-			if(rec==100)
+			if(rec==100||vr==5)
 			{
 				vas = 1;
 			}
@@ -571,6 +578,7 @@ class A
 		{
 			int vas = 0;
 			int rec = 0;
+			int vr =0;
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr.length;j++)
@@ -587,7 +595,7 @@ class A
 						else
 						{
 							System.out.println("\n state your choice ");
-							choiceP(hip,i,j,a);
+							vr = choiceP(hip,i,j,a);
 						}
 						i=arr.length;
 						j=arr.length;
@@ -598,7 +606,7 @@ class A
 					}
 				}
 			}
-			if(rec==100)
+			if(rec==100||vr==5)
 			{
 				vas = 1;
 			}
@@ -825,6 +833,7 @@ class A
 		{
 			int vas = 0;
 			int rec=0;
+			int vr = 0;
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr.length;j++)
@@ -841,7 +850,7 @@ class A
 						else
 						{
 							System.out.println("\n state your choice ");
-							choiceP(hip,i,j,a);
+							vr = choiceP(hip,i,j,a);
 						}
 						i=arr.length;
 						j=arr.length;
@@ -852,7 +861,7 @@ class A
 					}
 				}
 			}
-			if(rec==100)
+			if(rec==100||vr==5)
 			{
 				vas = 1;
 			}
@@ -950,6 +959,7 @@ class A
 		{
 			int vas = 0;
 			int rec=0;
+			int vr =0;
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr.length;j++)
@@ -966,7 +976,7 @@ class A
 						else
 						{
 							System.out.println("\n state your choice ");
-							choiceP(hip,i,j,a);
+							vr = choiceP(hip,i,j,a);
 						}
 						i=arr.length;
 						j=arr.length;
@@ -977,7 +987,7 @@ class A
 					}
 				}
 			}
-			if(rec==100)
+			if(rec==100||vr==5)
 			{
 				vas = 1;
 			}
@@ -1074,6 +1084,7 @@ class A
 		{
 			int vas = 0;
 			int rec = 0;
+			int vr = 0;
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr.length;j++)
@@ -1090,7 +1101,7 @@ class A
 						else
 						{
 							System.out.println("\n state your choice ");
-							choiceP(hip,i,j,(a+" "));
+							vr = choiceP(hip,i,j,(a+" "));
 						}
 						i=arr.length;
 						j=arr.length;
@@ -1101,7 +1112,7 @@ class A
 					}
 				}
 			}
-			if(rec==100)
+			if(rec==100||vr==5)
 			{
 				vas = 1;
 			}
@@ -1279,6 +1290,7 @@ class A
 		{
 			int pet=0;
 			int rec=0;
+			int vr =0;
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr.length;j++)
@@ -1298,7 +1310,7 @@ class A
 						}
 						if(!hip.isEmpty())
 						{
-							choiceP(hip,i,j,a);
+							vr = choiceP(hip,i,j,a);
 						}
 						i=arr.length;
 						j=arr.length;
@@ -1309,7 +1321,7 @@ class A
 					}
 				}
 			}
-			if(rec==100)
+			if(rec==100||vr==5)
 			{
 				pet = 1;
 			}
@@ -1433,6 +1445,7 @@ class A
 		{
 			int vas = 0;
 			int rec=0;
+			int vr =0;
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr.length;j++)
@@ -1449,7 +1462,7 @@ class A
 						else
 						{
 							System.out.println("\n state your choice ");
-							choiceP(hip,i,j,a);
+							vr = choiceP(hip,i,j,a);
 						}
 						i=arr.length;
 						j=arr.length;
@@ -1460,7 +1473,7 @@ class A
 					}
 				}
 			}
-			if(rec==100)
+			if(rec==100||vr==5)
 			{
 				vas = 1;
 			}
@@ -1592,6 +1605,7 @@ class A
 		{
 			int vas = 0;
 			int rec = 0;
+			int vr =0;
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr.length;j++)
@@ -1608,7 +1622,7 @@ class A
 						else
 						{
 							System.out.println("\n state your choice ");
-							choiceP(hip,i,j,a);
+							vr = choiceP(hip,i,j,a);
 						}
 						i=arr.length;
 						j=arr.length;
@@ -1619,7 +1633,7 @@ class A
 					}
 				}
 			}
-			if(rec==100)
+			if(rec==100||vr==5)
 			{
 				vas = 1;
 			}
@@ -1845,6 +1859,7 @@ class A
 		{
 			int vas = 0;
 			int rec=0;
+			int vr = 0;
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr.length;j++)
@@ -1861,7 +1876,7 @@ class A
 						else
 						{
 							System.out.println("\n state your choice ");
-							choiceP(hip,i,j,a);
+							vr = choiceP(hip,i,j,a);
 						}
 						i=arr.length;
 						j=arr.length;
@@ -1872,7 +1887,7 @@ class A
 					}
 				}
 			}
-			if(rec==100)
+			if(rec==100||vr==5)
 			{
 				vas = 1;
 			}
@@ -1969,6 +1984,7 @@ class A
 		{
 			int vas = 0;
 			int rec = 0;
+			int vr =0;
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr.length;j++)
@@ -1985,7 +2001,7 @@ class A
 						else
 						{
 							System.out.println("\n state your choice ");
-							choiceP(hip,i,j,a);
+							vr = choiceP(hip,i,j,a);
 						}
 						i=arr.length;
 						j=arr.length;
@@ -1996,7 +2012,7 @@ class A
 					}
 				}
 			}
-			if(rec==100)
+			if(rec==100||vr==5)
 			{
 				vas = 1;
 			}
@@ -2093,6 +2109,7 @@ class A
 		{
 			int vas = 0;
 			int rec = 0;
+			int vr =0;
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr.length;j++)
@@ -2109,7 +2126,7 @@ class A
 						else
 						{
 							System.out.println("\n state your choice ");
-							choiceP(hip,i,j,(a+" "));
+							vr = choiceP(hip,i,j,(a+" "));
 						}
 						i=arr.length;
 						j=arr.length;
@@ -2120,7 +2137,7 @@ class A
 					}
 				}
 			}
-			if(rec==100)
+			if(rec==100||vr==5)
 			{
 				vas = 1;
 			}
@@ -4273,7 +4290,6 @@ int runb(int a,int b)
 					}
 				}
 			}
-
 			if(gv!=2)
 			{
 				System.out.print("It's CheckMate White WON");
